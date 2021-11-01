@@ -6,7 +6,7 @@ public class ArraysExercises {
         System.out.println(Arrays.toString(numbers));
     }
     Person[] people = {new Person("Mia"), new Person("Emma"), new Person("Vivienne")};
-    for (people x : Person) {
-        System.out.println(Person);
+//    for (Person name : Person) {
+//        System.out.println(name.());
     }
-}
+
