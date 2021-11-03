@@ -28,6 +28,18 @@ public class Input {
         return scanner.nextInt();
     }
 
+    public double getDouble(double min, double max) {
+        double user;
+        do {
+            System.out.printf("Please type a number within %s and $s", min, max);
+            user = scanner.nextInt();
+        } while ((user > max)|| (user < min));
+        return user;
+    }
+
+    public double getDouble() {
+        return scanner.nextDouble();
+    }
     public static void main(String[] args) {
         Input input = new Input();
         input.getString();
