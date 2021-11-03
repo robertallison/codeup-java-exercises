@@ -20,9 +20,12 @@ public class Input {
         int user;
         do {
             System.out.printf("Please type a number within %s and $s", min, max);
-            user =
+            user = scanner.nextInt();
         } while ((user > max || user < min));
         return user;
+    }
+    public int getInt() {
+        return scanner.nextInt();
     }
 
     public static void main(String[] args) {
