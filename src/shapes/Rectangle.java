@@ -1,6 +1,6 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable{
 
     protected double length;
     protected double width;

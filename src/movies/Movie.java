@@ -1,5 +1,5 @@
 package movies;
-package util;
+
 
 public class Movie {
     private String name;
