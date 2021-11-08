@@ -1,5 +1,6 @@
 package util;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.Scanner;
 
 public class Input {
@@ -28,6 +29,16 @@ public class Input {
         return scanner.nextInt();
     }
 
+    public int getInt(String prompt) {
+        try {
+            System.out.println(prompt);
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.err.println("Error, invalid");
+            return getInt(prompt);
+        }
+    }
+
     public double getDouble(double min, double max) {
         double user;
         do {
@@ -39,6 +50,16 @@ public class Input {
 
     public double getDouble() {
         return scanner.nextDouble();
+    }
+
+    public double getDouble(String prompt) {
+        try{
+            System.out.println(prompt);
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e) {
+            System.err.println("Error, invalid");
+            return getDouble(prompt);
+        }
     }
     public static void main(String[] args) {
         Input input = new Input();
